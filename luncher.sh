@@ -27,7 +27,7 @@ if [ ! -e "$OUTPUT_PID_PATH/$OUTPUT_PID_FILE" ]; then
 	# If the running.pid file doesn't exists, create it, start PseudoChannel.py and add the PID to it.
 
 	"$PYTHON_TO_USE" ./$SCRIPT_TO_EXECUTE_PLUS_ARGS > /dev/null 2>&1 & echo $! > "$OUTPUT_PID_PATH/$OUTPUT_PID_FILE"
-	echo $(date +'%Y-%m-%d %H:%M:%S') '|luncher|info|The service has been started|200' >> /home/tweety/log/log.txt
+	# echo $(date +'%Y-%m-%d %H:%M:%S') '|luncher|info|The service has been started|200' >> /home/tweety/log/log.txt
 	echo "Started $SCRIPT_TO_EXECUTE_PLUS_ARGS @ Process: $!"
 
 	sleep .7
